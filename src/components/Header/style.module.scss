@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--grey-0);
+    height: 4.75rem;
+    width: 100vw;
+    max-width: none;
+    margin-bottom: 1.875rem;
+
+
+    img{
+        width: 9.9337rem;
+        height: 2.3019rem;
+        margin-left: 0.9375rem;
+    }
+
+    button{
+        color: var(--grey-button);
+        background-color: transparent;
+        border: none;
+        margin-right: 1.875rem;
+        position: relative;
+        
+        :hover{
+            cursor: pointer;
+            color: var(--grey-600);
+        }
+    }
+    
+    span{
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        position: absolute;
+        height: 0.875rem;
+        top: 0rem;
+        right: 0rem;
+        border-radius: 0.25rem;
+
+        padding: 0.0625rem;
+    }
+}

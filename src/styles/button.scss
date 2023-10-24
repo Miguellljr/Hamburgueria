@@ -1,0 +1,42 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 368px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  padding: 0px 20px 0px 20px;
+
+  background-color: var(--grey-button);
+  color: var(--color-white);
+
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.21rem;
+
+  cursor: pointer;
+
+  &.small {
+    width: 106px;
+    height: 40px;
+  }
+
+  &.close {
+    background-color: transparent;
+    color: black;
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+      background-color: transparent;
+      color: black;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
+}

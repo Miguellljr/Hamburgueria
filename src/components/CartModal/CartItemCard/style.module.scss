@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  max-width: 22.7069rem;
+  margin: 5px 15px;
+  position: relative;
+
+  .contentBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5625rem;
+  }
+
+  img {
+    width: 5.1413rem;
+    height: 5rem;
+    background-color: var(--grey-0);
+
+    border-radius: 5px;
+  }
+
+  span {
+    color: var(--color-primary);
+  }
+
+  button {
+    background-color: transparent;
+    color: var(--grey-button);
+    border: none;
+
+    padding: 0;
+    height: 1.3125rem;
+
+    position: absolute;
+    top: 0.625rem;
+    right: 0rem;
+    
+
+    :hover {
+      cursor: pointer;
+      color: var(--grey-600);
+    }
+  }
+}
