@@ -16,9 +16,6 @@ export const HomePage = ({ setVisible, isVisible }) => {
     localCart ? JSON.parse(localCart) : []
   );
 
-  // useEffect montagem - carrega os produtos da API e joga em productList
-  // filtro de busca
-
   useEffect(() => {
     const getProducts = async () => {
       try {
@@ -26,7 +23,6 @@ export const HomePage = ({ setVisible, isVisible }) => {
           params: { search },
         });
         setProductList(data);
-        console.log(data);
       } catch (error) {
         console.log(error);
       }
@@ -35,13 +31,9 @@ export const HomePage = ({ setVisible, isVisible }) => {
     getProducts();
   }, [search]);
 
-  // useEffect atualização - salva os produtos no localStorage (carregar no estado)
-
   useEffect(() => {
     localStorage.setItem("@CART_LIST", JSON.stringify(cartList));
   }, [cartList]);
-
-  // adição, exclusão, e exclusão geral do carrinho
 
   const addToCart = (product) => {
     const hasProduct = cartList.some((cart) => cart.id === product.id);
@@ -63,8 +55,6 @@ export const HomePage = ({ setVisible, isVisible }) => {
     localStorage.clear();
     setCartList([]);
   };
-
-  // renderizações condições e o estado para exibir ou não o carrinho
 
   return (
     <>
